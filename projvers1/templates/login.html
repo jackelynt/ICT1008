@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smort Map</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+    <body>
+        <div id="outerbox">
+            <img src="../static/images/punggol_img.jpg">
+            <div id="innerbox" class="row">
+                <form action = "http://localhost:5000/login" method = "post">
+                    <h1>Welcome to the Punggol Smart Mapping System!</h1>
+                    <p id="introtext">Map your way home from the nearest MRT/LRT!</p>
+                    <p>
+                        From:
+                        <select id="MRT_LRT">
+                            <option value="PunggolMRT">Punggol (NE17)</option>
+                            <option value="CoveLRT">Cove (PE1)</option>
+                            <option value="MeridianLRT">Meridian (PE2)</option>
+                            <option value="CoralEdgeLRT">Coral Edge (PE3)</option>
+                            <option value="RivieraLRT">Riviera (PE4)</option>
+                            <option value="KadaloorLRT">Kadaloor (PE5)</option>
+                            <option value="OasisLRT">Oasis (PE6)</option>
+                            <option value="DamaiLRT">Damai (PE7)</option>
+                            <option value="SamKeeLRT">Sam Kee (PW1)</option>
+                            <option value="TeckLeeLRT">Riviera (PW2)</option>
+                            <option value="PunggolPointLRT">Punggol Point (PW3)</option>
+                            <option value="SamuderaLRT">Samudera (PW4)</option>
+                            <option value=NibongLRT">Nibong (PW5)</option>
+                            <option value="SumangLRT">Sumang (PW6)</option>
+                            <option value="SooTeckLRT">SooTeck (PW7)</option>
+
+
+                        </select>   To: <input type = "text" name = "end"/> <input id="submitbutton" type = "Submit" value = "Continue"/></p>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+{#<form action = "http://localhost:5000/login" method = "post">#}
+{#    <h1>Welcome to the Punggol Smart Mapping System!</h1>#}
+{#    <div class="column">#}
+{#        <p>From: <input type = "text" name = "start"/> </p>#}
+{#    </div>#}
+{#    <div class="column">#}
+{#        <p>To: <input type = "text" name = "end"/></p>#}
+{#    </div>#}
+{#    <p><input id="submitbutton" type = "Submit" value = "Continue"/></p>#}
+{#</form>#}
+{##}
+{#<form action = "http://localhost:5000/login" method = "post">#}
+{#                    <h1>Welcome to the Punggol Smart Mapping System!</h1>#}
+{#                    <p>From: <input type = "text" name = "start"/> To: <input type = "text" name = "end"/> </p>#}
+{#                    <p><input id="submitbutton" type = "Submit" value = "Continue"/></p>#}
+{#                </form>#}
