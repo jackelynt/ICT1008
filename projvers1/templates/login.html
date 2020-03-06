@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Smort Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
     <body>
-        <div id="outerbox">
+    <div class="row" id="searchRow">
+        <div id="backgroundimg">
             <img src="../static/images/punggol_img.jpg">
-            <div id="innerbox" class="row">
+        </div>
+            <div id="innerbox">
                 <form action = "http://localhost:5000/login" method = "post">
                     <h1>Welcome to the Punggol Smart Mapping System!</h1>
                     <p id="introtext">Map your way home from the nearest MRT/LRT!</p>
@@ -36,9 +42,28 @@
 
                 </form>
             </div>
+    </div>
+    <div class="row" id="mapRow">
+        <div class="col-md-3" id="buttons_col">
+          <ul class="btn-group-vertical" id="buttons">
+            <button type="button" class="btn btn-secondary">Shortest Distance</button>
+            <button type="button" class="btn btn-secondary">Quickest Route</button>
+          </ul>
         </div>
+        <div class="col-md-9" id="map_col">
+            <iframe src="https://www.onemap.sg/amm/amm.html?mapStyle=Default&zoomLevel=17&marker=latLng:1.4045467269999998,103.9020726!colour:red&popupWidth=200" height="700" width="850" scrolling="no" frameborder="20" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+    </div>
+
+
+
     </body>
 </html>
+
+{#<div class="row" id="map">#}
+{#                <p>HIiiiiiiiiiiiiiiiii</p>#}
+{#                <iframe src="https://www.onemap.sg/amm/amm.html?mapStyle=Default&zoomLevel=17&popupWidth=200" height="800" width="1000" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>#}
+{#            </div>#}
 
 {#<form action = "http://localhost:5000/login" method = "post">#}
 {#    <h1>Welcome to the Punggol Smart Mapping System!</h1>#}
@@ -56,3 +81,11 @@
 {#                    <p>From: <input type = "text" name = "start"/> To: <input type = "text" name = "end"/> </p>#}
 {#                    <p><input id="submitbutton" type = "Submit" value = "Continue"/></p>#}
 {#                </form>#}
+<script>
+    $(document).ready(function()
+    {
+      $("button:odd").css({
+        "background-color":"#A9A9A9",
+        "color":"#fff"});
+    });
+</script>

@@ -8,6 +8,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -16,6 +23,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/projvers1" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jackelyn\Desktop\AY20 T2\1008 - Data Structures and Algorithms\GUI Project Github\projvers1\static\js" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -56,7 +70,10 @@
       <updated>1583238244460</updated>
       <workItem from="1583238247719" duration="33000" />
       <workItem from="1583238304236" duration="33000" />
-      <workItem from="1583238523578" duration="77000" />
+      <workItem from="1583238523578" duration="2932000" />
+      <workItem from="1583331676262" duration="7802000" />
+      <workItem from="1583390650237" duration="886000" />
+      <workItem from="1583502140902" duration="4248000" />
     </task>
     <servers />
   </component>
@@ -77,6 +94,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GUI_Project_Github$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1583238602634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projvers1" />
+    <SUITE FILE_PATH="coverage/GUI_Project_Github$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1583506403665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projvers1" />
   </component>
 </project>

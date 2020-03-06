@@ -2,7 +2,7 @@ h1{
     font-family: "Century Gothic";
     justify-content: center;
     align-content: center;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 *{
@@ -10,7 +10,7 @@ h1{
     font-size: 20px;
 }
 #innerbox{
-    position:absolute;
+    position: relative;
     z-index: 1;
     margin: 30px;
     opacity: 100%;
@@ -43,4 +43,23 @@ input{
 
 #MRT_LRT{
     font-size: 17px;
+}
+.row {
+    margin: 0px 0px 0px 0px;
+}
+
+#buttons{
+    float:right;
+}
+#buttons_col
+{
+    padding-right:0px;
+}
+#map_col
+{
+    padding-left: 0px;
+}
+.btn
+{
+    text-align: right;
 }
