@@ -12,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -24,10 +25,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/projvers1" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jackelyn\Desktop\AY20 T2\1008 - Data Structures and Algorithms\GUI Project Github\projvers1" />
+      <recent name="C:\Users\Jackelyn\Desktop\AY20 T2\1008 - Data Structures and Algorithms\GUI Project Github\projvers1\templates" />
       <recent name="C:\Users\Jackelyn\Desktop\AY20 T2\1008 - Data Structures and Algorithms\GUI Project Github\projvers1\static\js" />
     </key>
   </component>
@@ -43,7 +46,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GUI Project Github" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projvers1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projvers1/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Flask" type="Python.FlaskServer" nameIsGenerated="true">
       <module name="GUI Project Github" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -57,6 +82,11 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -75,6 +105,12 @@
       <workItem from="1583390650237" duration="886000" />
       <workItem from="1583502140902" duration="4863000" />
       <workItem from="1583663438039" duration="1566000" />
+      <workItem from="1584169096729" duration="17144000" />
+      <workItem from="1584283647857" duration="7297000" />
+      <workItem from="1584596302834" duration="1548000" />
+      <workItem from="1584766009637" duration="22495000" />
+      <workItem from="1584813816167" duration="8000" />
+      <workItem from="1584858992378" duration="4233000" />
     </task>
     <servers />
   </component>
@@ -95,6 +131,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GUI_Project_Github$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1583506403665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projvers1" />
+    <SUITE FILE_PATH="coverage/GUI_Project_Github$app.coverage" NAME="app Coverage Results" MODIFIED="1584863344246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projvers1" />
+    <SUITE FILE_PATH="coverage/GUI_Project_Github$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1584186657746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projvers1" />
   </component>
 </project>
