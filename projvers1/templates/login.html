@@ -2,90 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Smort Map</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Smart Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
-    <body>
-    <div class="row" id="searchRow">
-        <div id="backgroundimg">
+
+
+<body>
+<div class = "container-fluid">
+    <div class="row">
+        <div class="ml-0" id="backgroundimg">
             <img src="../static/images/punggol_img.jpg">
         </div>
+
             <div id="innerbox">
-                <form action = "http://localhost:5000/login" method = "post">
-                    <h1>Welcome to the Punggol Smart Mapping System!</h1>
+                <div id="TitleBack">
+                    <h1 id="MainHeader">Welcome to the Punggol Smart Mapping System!</h1>
+                </div>
+
+                <div id="InputBox">
                     <p id="introtext">Map your way home from the nearest MRT/LRT!</p>
                     <p>
                         From:
                         <select id="MRT_LRT">
-                            <option value="PunggolMRT">Punggol (NE17)</option>
-                            <option value="CoveLRT">Cove (PE1)</option>
-                            <option value="MeridianLRT">Meridian (PE2)</option>
-                            <option value="CoralEdgeLRT">Coral Edge (PE3)</option>
-                            <option value="RivieraLRT">Riviera (PE4)</option>
-                            <option value="KadaloorLRT">Kadaloor (PE5)</option>
-                            <option value="OasisLRT">Oasis (PE6)</option>
-                            <option value="DamaiLRT">Damai (PE7)</option>
-                            <option value="SamKeeLRT">Sam Kee (PW1)</option>
-                            <option value="TeckLeeLRT">Teck Lee (PW2)</option>
-                            <option value="PunggolPointLRT">Punggol Point (PW3)</option>
-                            <option value="SamuderaLRT">Samudera (PW4)</option>
-                            <option value=NibongLRT">Nibong (PW5)</option>
-                            <option value="SumangLRT">Sumang (PW6)</option>
-                            <option value="SooTeckLRT">Soo Teck (PW7)</option>
+                            <option value="Punggol">Punggol (NE17)</option>
+                            <option value="Cove">Cove (PE1)</option>
+                            <option value="Meridian">Meridian (PE2)</option>
+                            <option value="Coral Edge">Coral Edge (PE3)</option>
+                            <option value="Riviera">Riviera (PE4)</option>
+                            <option value="Kadaloor">Kadaloor (PE5)</option>
+                            <option value="Oasis">Oasis (PE6)</option>
+                            <option value="Damai">Damai (PE7)</option>
+                            <option value="Sam Kee">Sam Kee (PW1)</option>
+                            <option value="Teck Lee">Teck Lee (PW2)</option>
+                            <option value="Punggol Point">Punggol Point (PW3)</option>
+                            <option value="Samudera">Samudera (PW4)</option>
+                            <option value=Nibong">Nibong (PW5)</option>
+                            <option value="Sumang">Sumang (PW6)</option>
+                            <option value="SooTeck">Soo Teck (PW7)</option>
+                        </select>
+                        To:
+                        <select id="Postal_Code">
+                            {% for x in ddlist %}
+                            <option value="{{ [x[1],x[2],x[3]] }}" SELECTED>{{ x[0] }}</option>
+                            {% endfor %}
+                        </select>
 
 
-                        </select>   To: <input type = "text" name = "end"/> <input id="submitbutton" type = "Submit" value = "Continue"/></p>
-
-                </form>
+                        <input id="submitbutton" type="Submit" value="Continue"/></p>
+                </div>
             </div>
     </div>
-    <div class="row" id="mapRow">
-        <div class="col-md-3" id="buttons_col">
-          <ul class="btn-group-vertical" id="buttons">
-            <button type="button" class="btn btn-secondary">Shortest Distance</button>
-            <button type="button" class="btn btn-secondary">Quickest Route</button>
-          </ul>
-        </div>
-        <div class="col-md-9" id="map_col">
-            <iframe src="https://www.onemap.sg/amm/amm.html?mapStyle=Default&zoomLevel=17&marker=latLng:1.4045467269999998,103.9020726!colour:red&popupWidth=200" height="700" width="850" scrolling="no" frameborder="20" allowfullscreen="allowfullscreen"></iframe>
+
+    <h2>Map</h2>
+    <div class="row" id="thisMap">
+        <div id="map">
+            <iframe id="testfrm" src="{{ url_for('reload') }}" frameborder="0", style="border:0" width="1000" height="350"></iframe>
+            <iframe id="testfrm2" src="{{ url_for('reloadnext') }}" style="display:none" frameborder="0", style="border:0" width="1000" height="350"></iframe>
         </div>
     </div>
+</div>
+
+</body>
 
 
 
-    </body>
-</html>
-
-{#<div class="row" id="map">#}
-{#                <p>HIiiiiiiiiiiiiiiiii</p>#}
-{#                <iframe src="https://www.onemap.sg/amm/amm.html?mapStyle=Default&zoomLevel=17&popupWidth=200" height="800" width="1000" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>#}
-{#            </div>#}
-
-{#<form action = "http://localhost:5000/login" method = "post">#}
-{#    <h1>Welcome to the Punggol Smart Mapping System!</h1>#}
-{#    <div class="column">#}
-{#        <p>From: <input type = "text" name = "start"/> </p>#}
-{#    </div>#}
-{#    <div class="column">#}
-{#        <p>To: <input type = "text" name = "end"/></p>#}
-{#    </div>#}
-{#    <p><input id="submitbutton" type = "Submit" value = "Continue"/></p>#}
-{#</form>#}
-{##}
-{#<form action = "http://localhost:5000/login" method = "post">#}
-{#                    <h1>Welcome to the Punggol Smart Mapping System!</h1>#}
-{#                    <p>From: <input type = "text" name = "start"/> To: <input type = "text" name = "end"/> </p>#}
-{#                    <p><input id="submitbutton" type = "Submit" value = "Continue"/></p>#}
-{#                </form>#}
-<script>
+<script type="text/javascript">
     $(document).ready(function()
     {
       $("button:odd").css({
         "background-color":"#A9A9A9",
         "color":"#fff"});
     });
+
+    //onclick button to update map
+    $(function() {
+      $('#submitbutton').bind('click', function() {
+          var e = document.getElementById("MRT_LRT");
+          var mrtName = e.options[e.selectedIndex].value;
+          var p = document.getElementById("Postal_Code");
+          var intCode = p.options[p.selectedIndex].value;
+          var res = intCode.replace(/'/g, "").replace("[", "").replace("]", "").replace(/ /g, "");
+          var splitUp = res.split(",");
+          var PCode = parseInt(splitUp[0]);
+          var Longtit = parseFloat(splitUp[1]);
+          var Latit = parseFloat(splitUp[2]);
+          var InputDat = {startMrtLoc: mrtName, postalCode : PCode, Longt: Longtit, Lat: Latit};
+
+          $.ajax({url: "/reloadnext", data:InputDat, success: function(result){
+            document.getElementById('testfrm').style = "display:none";
+            document.getElementById('testfrm2').style = "display:initial";
+            document.getElementById('testfrm2').contentDocument.location.reload(true);
+          }});
+        return false;
+      });
+    });
+
 </script>
+
+</html>
